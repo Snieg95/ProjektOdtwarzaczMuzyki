@@ -31,5 +31,15 @@ namespace Player
         {
 
         }
+
+
+        private void axWindowsMediaPlayer1_Enter_1(object sender, EventArgs e)
+        {
+            string url = @"C:\Users\Arelias\Desktop\She's American.mp3";
+            axWindowsMediaPlayer1.URL = url;
+            axWindowsMediaPlayer1.Ctlcontrols.play();
+        }
+
+        
     }
 }
