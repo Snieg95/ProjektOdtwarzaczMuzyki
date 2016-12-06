@@ -29,17 +29,30 @@ namespace Player
 
         private void button1_Click(object sender, EventArgs e)
         {
+            OpenFileDialog openFileDialog1 = new OpenFileDialog();
 
-        }
+            if (openFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                textBox3.Text = openFileDialog1.FileName;    
+                    }
 
 
+                    }
         private void axWindowsMediaPlayer1_Enter_1(object sender, EventArgs e)
         {
-            string url = @"C:\Users\Arelias\Desktop\She's American.mp3";
+            string url = textBox3.Text;
             axWindowsMediaPlayer1.URL = url;
             axWindowsMediaPlayer1.Ctlcontrols.play();
         }
 
-        
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
