@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace Player
 {
@@ -19,7 +20,7 @@ namespace Player
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -35,7 +36,8 @@ namespace Player
             {
                 textBox3.Text = openFileDialog1.FileName;    
                     }
-
+           string elo = System.IO.Path.GetDirectoryName(textBox3.Text);
+            textBox4.Text = elo;
 
                     }
         private void axWindowsMediaPlayer1_Enter_1(object sender, EventArgs e)
@@ -54,5 +56,19 @@ namespace Player
         {
 
         }
+
+        private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+            {
+            
+
+        }
+
+        
     }
-}
+    }
+

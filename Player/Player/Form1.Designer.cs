@@ -41,6 +41,7 @@
             this.button7 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -123,6 +124,7 @@
             this.button5.TabIndex = 8;
             this.button5.Text = "Playlist";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button6
             // 
@@ -163,6 +165,14 @@
             this.textBox3.TabIndex = 12;
             this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(378, 304);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(419, 22);
+            this.textBox4.TabIndex = 13;
+            this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
+            // 
             // Form1
             // 
             this.AllowDrop = true;
@@ -181,6 +191,7 @@
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
+            this.Controls.Add(this.textBox4);
             this.MaximumSize = new System.Drawing.Size(1280, 720);
             this.MinimumSize = new System.Drawing.Size(1280, 720);
             this.Name = "Form1";
@@ -206,6 +217,7 @@
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBox4;
     }
 }
 
