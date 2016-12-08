@@ -16,7 +16,11 @@ namespace Player
         public Form1()
         {
             InitializeComponent();
+           
+
         }
+
+        string[] files, paths;
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -30,16 +34,16 @@ namespace Player
 
         private void button1_Click(object sender, EventArgs e)
         {
-            OpenFileDialog openFileDialog1 = new OpenFileDialog();
-
             if (openFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
-                textBox3.Text = openFileDialog1.FileName;    
-                    }
-           string elo = System.IO.Path.GetDirectoryName(textBox3.Text);
-            textBox4.Text = elo;
-
-                    }
+                files = openFileDialog1.SafeFileNames;
+                paths = openFileDialog1.FileNames;
+                for (int i = 0; i <files.Length; i++)
+                {
+                    listBox1.Items.Add(files[i]);
+                }
+            }
+        }
         private void axWindowsMediaPlayer1_Enter_1(object sender, EventArgs e)
         {
             string url = textBox3.Text;
@@ -57,10 +61,7 @@ namespace Player
 
         }
 
-        private void textBox4_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void button5_Click(object sender, EventArgs e)
             {
@@ -68,7 +69,35 @@ namespace Player
 
         }
 
-        
+        private void button2_Click(object sender, EventArgs e)
+        {
+            axWindowsMediaPlayer1.URL = paths[listBox1.SelectedIndex];
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            
+            if(files.Length - 1 > listBox1.SelectedIndex)
+            {
+                axWindowsMediaPlayer1.URL = paths[listBox1.SelectedIndex + 1];
+                listBox1.SelectedIndex = listBox1.SelectedIndex + 1;
+            }
+            
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            if (listBox1.SelectedIndex > 0)
+            {
+                axWindowsMediaPlayer1.URL = paths[listBox1.SelectedIndex - 1];
+                listBox1.SelectedIndex = listBox1.SelectedIndex - 1;
+            }
+        }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //axWindowsMediaPlayer1.URL = paths[listBox1.SelectedIndex];
+        }
     }
     }
 
