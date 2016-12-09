@@ -158,7 +158,10 @@ namespace Player
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if(listBox1.SelectedItems != null)
+            { 
             axWindowsMediaPlayer1.URL = paths[listBox1.SelectedIndex];
+            }
         }
     }
     }
