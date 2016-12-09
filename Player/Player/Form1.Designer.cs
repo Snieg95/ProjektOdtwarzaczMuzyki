@@ -224,6 +224,7 @@
             this.MaximumSize = new System.Drawing.Size(1280, 720);
             this.MinimumSize = new System.Drawing.Size(1280, 720);
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MH Player";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).EndInit();
