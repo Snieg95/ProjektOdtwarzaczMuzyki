@@ -151,6 +151,11 @@ namespace Player
 
         }
 
+        private void button5_Click_1(object sender, EventArgs e)
+        {
+            MessageBox.Show("Michal Haraf\nInformatyka Ogolna\nGr 2 Lab 2\nIndeks 129649");
+        }
+
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             axWindowsMediaPlayer1.URL = paths[listBox1.SelectedIndex];

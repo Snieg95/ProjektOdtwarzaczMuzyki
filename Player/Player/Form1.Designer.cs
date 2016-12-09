@@ -44,6 +44,7 @@
             this.i = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.button5 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -51,7 +52,7 @@
             // 
             this.button1.BackColor = System.Drawing.Color.Brown;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(636, 581);
+            this.button1.Location = new System.Drawing.Point(558, 581);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(129, 80);
             this.button1.TabIndex = 0;
@@ -98,7 +99,7 @@
             // 
             // button6
             // 
-            this.button6.BackColor = System.Drawing.Color.Bisque;
+            this.button6.BackColor = System.Drawing.Color.Azure;
             this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button6.Location = new System.Drawing.Point(1038, 482);
             this.button6.Name = "button6";
@@ -110,7 +111,7 @@
             // 
             // button7
             // 
-            this.button7.BackColor = System.Drawing.Color.Bisque;
+            this.button7.BackColor = System.Drawing.Color.Azure;
             this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button7.Location = new System.Drawing.Point(398, 482);
             this.button7.Name = "button7";
@@ -124,7 +125,7 @@
             // 
             this.button8.BackColor = System.Drawing.Color.CadetBlue;
             this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.Location = new System.Drawing.Point(793, 581);
+            this.button8.Location = new System.Drawing.Point(718, 581);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(129, 80);
             this.button8.TabIndex = 11;
@@ -200,12 +201,25 @@
             this.label4.Size = new System.Drawing.Size(28, 24);
             this.label4.TabIndex = 18;
             // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.Location = new System.Drawing.Point(878, 581);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(129, 80);
+            this.button5.TabIndex = 19;
+            this.button5.Text = "Info";
+            this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click_1);
+            // 
             // Form1
             // 
             this.AllowDrop = true;
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1262, 673);
+            this.Controls.Add(this.button5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.i);
@@ -249,6 +263,7 @@
         private System.Windows.Forms.Label i;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button button5;
     }
 }
 
