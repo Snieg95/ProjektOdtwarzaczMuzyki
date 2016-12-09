@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using System.Threading;
 
 namespace Player
 {
@@ -19,7 +20,7 @@ namespace Player
         public Form1()
         {
             InitializeComponent();
-            
+            Thread.Sleep(2000);
         }
 
         string[] files, paths;
